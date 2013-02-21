@@ -16,4 +16,5 @@ setup(
     license = "MIT",
     packages = find_packages(exclude=["*.tests", "*.tests.*"]),
     install_requires = ['pygments'],
+    test_suite = 'pyprof.tests',
 )

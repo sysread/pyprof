@@ -111,13 +111,5 @@ class Profile(object):
             location = self.make_location(raw_location)
             call = self.make_call(raw_calls)
             report.record_call(location, call)
+
         return report
-
-
-if __name__ == '__main__':
-    file_name = '/Volumes/devel/cms_dev/src/adgeletti_profile_data'
-    profile = Profile(file_name)
-    profile.add_search_path('/Volumes/devel/cms_dev/src')
-    profile.add_rewrite_rule('/opt/devel', '/Volumes/devel')
-    report = profile.build_report(format='html', colorize=True)
-    report.generate('../output')

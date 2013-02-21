@@ -10,10 +10,6 @@ from pygments.lexers import PythonLexer
 
 
 class Report(object):
-    COOL = 0
-    WARM = 1
-    HOT = 2
-
     def __init__(self):
         # Location data
         self.callees = defaultdict(set) # location set by path
